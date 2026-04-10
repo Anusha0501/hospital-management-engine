@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class DistributedLockService {
 
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(DistributedLockService.class);
     private final RedissonClient redissonClient;
 
     @Value("${hospital.appointment.lock-timeout-seconds}")
